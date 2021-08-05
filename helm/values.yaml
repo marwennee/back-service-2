@@ -56,7 +56,7 @@ ingress:
   className: ""
   annotations: {}
   rules:
-    - host: elyadata-devops-1.com
+    - host: elyadata-devops-back-1.com
       http:
         paths:
           - pathType: Prefix
