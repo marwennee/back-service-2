@@ -55,8 +55,16 @@ ingress:
   name: nodejs-ingress-v2
   className: ""
   annotations: {}
-  hosts:
-  - elyadata-devops-back-1.com
+  rules:
+    - host: elyadata-devops-1.com
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: nodejs-service-v2
+                port:
+                  number: 8080
 
 autoscaling:
   enabled: false
