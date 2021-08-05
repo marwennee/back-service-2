@@ -59,7 +59,8 @@ ingress:
     - host: elyadata-devops-1.com
       http:
         paths:
-          - path: /
+          - pathType: Prefix
+            path: /
             backend:
               service:
                 name: nodejs-service-v2
